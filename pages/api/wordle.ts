@@ -54,6 +54,6 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
 			}
 		}
 	} else {
-		res.status(405).json({ error: `${req.method} unsupported.` });
+		res.status(200).json({ answer: getWordOfTheDay() });
 	}
 }
